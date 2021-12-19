@@ -1,0 +1,43 @@
+
+
+sudo dpkg -i -E ./amazon-cloudwatch-agent.deb
+
+while true; do (echo "%CPU %MEM ARGS $(date)" && ps -e -o pcpu,pmem,args --sort=pcpu | cut -d" " -f1-5 | tail) >> ps.log; sleep 5; done
+
+sar -n DEV 1  >> network.log
+
+dstat -d >>disk.log
+
+http://18.117.73.240:8000/
+
+
+ls -al aws_demo.pem
+
+chmod 400 aws_demo.pem
+
+ssh -i aws_demo.pem ubuntu@3.14.28.9
+
+free -h
+
+cat /proc/cpuinfo
+
+Go instance id --> security group  --> add ICMPv4 type
+
+nano index.html
+
+<html>
+.....
+</html>
+
+python3 -m http.server
+
+curl localhost:8000
+
+ ps -aux | grep python
+ 
+ kill -9 1305
+
+
+
+sudo dpkg -i -E ./amazon-cloudwatch-agent.deb
+
