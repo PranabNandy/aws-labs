@@ -1,15 +1,29 @@
 
+( Make sure you created the IAM role)
+
+wget https://s3.amazonaws.com/amazoncloudwatch-agent/ubuntu/amd64/latest/amazon-cloudwatch-agent.deb
 
 sudo dpkg -i -E ./amazon-cloudwatch-agent.deb
 
-while true; do (echo "%CPU %MEM ARGS $(date)" && ps -e -o pcpu,pmem,args --sort=pcpu | cut -d" " -f1-5 | tail) >> ps.log; sleep 5; done
+sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-config-wizard
 
-sar -n DEV 1  >> network.log
+( Configure The agent here --> add the path for log file)
 
-dstat -d >>disk.log
+sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -c file:/opt/aws/amazon-cloudwatch-agent/bin/config.json -s
+
+
+--------------------------------------------------------------------------------
+
+scp -i aws_demo.pem ubuntu@3.131.119.253:/home/ubuntu/PranabNandy.xls /home/pranab/Documents/
+
+while true; do (echo "%CPU " && ps -e -o pcpu --sort=pcpu | cut -d" " -f1-5 | tail) >> cpu.log; sleep 5; done
+
+dstat -m >>Memory.csv
+
+dstat >>AllLogs.csv
+-------------------------------------------------------------------
 
 http://18.117.73.240:8000/
-
 
 ls -al aws_demo.pem
 
@@ -36,8 +50,12 @@ curl localhost:8000
  ps -aux | grep python
  
  kill -9 1305
+--------------------------------------------------------------------
 
+while true; do (echo "%CPU %MEM ARGS $(date)" && ps -e -o pcpu,pmem,args --sort=pcpu | cut -d" " -f1-5 | tail) >> ps.log; sleep 5; done
 
+sar -n DEV 1  >> network.log
 
-sudo dpkg -i -E ./amazon-cloudwatch-agent.deb
+dstat -d >>disk.log
+--------------------------------------------------------------------
 
