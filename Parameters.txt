@@ -1,0 +1,24 @@
+Parameters
+------------------
+1) Memory Usgaes
+2) No of Interrupt
+3) No of Context Switches
+4) Disk Read
+5) Disk Write
+6) Network Receive
+7) Network Send
+8) CPU usages
+
+
+Programs
+-------------------
+1) Recursive + Fork
+2) Iterative + Fork
+3) Thread + Iteration
+4) Thread + Recursion
+5) File + Recursion
+6) File + Iteration
+7) File + Fork
+8) File + Thread
+9) Distributed DoS
+ 
