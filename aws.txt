@@ -18,6 +18,8 @@ scp -i aws_demo.pem ubuntu@3.131.119.253:/home/ubuntu/PranabNandy.xls /home/pran
 
 while true; do (echo "%CPU " && ps -e -o pcpu --sort=pcpu | cut -d" " -f1-5 | tail) >> cpu.log; sleep 5; done
 
+mpstat 1 >>cpu.csv
+
 dstat -m >>Memory.csv
 
 dstat >>AllLogs.csv
@@ -52,7 +54,7 @@ curl localhost:8000
  kill -9 1305
 --------------------------------------------------------------------
 
-while true; do (echo "%CPU %MEM ARGS $(date)" && ps -e -o pcpu,pmem,args --sort=pcpu | cut -d" " -f1-5 | tail) >> ps.log; sleep 5; done
+while true; do (echo "%CPU %MEM ARGS $(date)" && ps -e -o pcpu,pmem,args --sort=pcpu | cut -d" " -f1-5 | tail) >> cpu.log; sleep 5; done
 
 sar -n DEV 1  >> network.log
 
