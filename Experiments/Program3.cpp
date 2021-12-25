@@ -15,7 +15,7 @@ void even(){
 	unique_lock<mutex> l1(m,defer_lock);
 	 while(1)
    {
-   		int *p=new int(100);
+   		int *p=new int(1);
         cout<<this_id<<"  I am Even "<<c<<endl;
         c++;
    }
@@ -25,7 +25,7 @@ void odd(){
 	unique_lock<mutex> l2(m,defer_lock);
 	while(1)
     {
-    	int *p=new int(100);
+    	int *p=new int(1);
        cout<<this_id<<"   I am odd "<<c<<endl;
        c--;
     }
