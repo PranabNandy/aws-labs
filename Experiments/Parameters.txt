@@ -14,12 +14,12 @@ Programs
 -------------------
 1) Recursive + Fork        --> 1hr 1GB ( Uncountable Infinite)
 2) Recursive + Fork        --> Countable Infinite
-3) Iterative + Fork
-4) Thread + Iteration
-5) Thread + Recursion
-6) File + Recursion
-7) File + Iteration
-8) File + Fork
-9) File + Thread
-10) Distributed DoS
+// 3) Iterative + Fork
+3) Thread + Iteration
+4) Thread + Recursion
+5) File + Recursion
+6) File + Iteration
+7) File + Fork
+8) File + Thread
+9) Distributed DoS
  
