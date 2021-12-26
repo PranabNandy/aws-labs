@@ -17,9 +17,9 @@ Programs
 // 3) Iterative + Fork
 3) Thread + Iteration
 4) Thread + Recursion
-5) File + Recursion
-6) File + Iteration
-7) File + Fork
-8) File + Thread
-9) Distributed DoS
+//5) File + Recursion
+5) File + Iteration   ( Create and Delete)
+6) File + Fork
+7) File + Thread     ( Read all Dir)
+8) Distributed DoS
  
