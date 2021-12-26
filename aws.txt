@@ -15,6 +15,9 @@ sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-c
 --------------------------------------------------------------------------------
 x=100; while [ $x -gt 0 ]; do ./wordindex.out /; x=$(($x-1)); done
 
+x=100; while [ $x -gt 0 ]; do scp -i aws_demo.pem ubuntu@18.118.169.200:/home/ubuntu/sample21.txt /home/ubuntu/aws-labs/; x=$(($x-1)); done
+
+
 
 scp -i aws_demo.pem ubuntu@3.131.119.253:/home/ubuntu/PranabNandy.xls /home/pranab/Documents/
 
