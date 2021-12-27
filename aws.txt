@@ -17,7 +17,7 @@ x=100; while [ $x -gt 0 ]; do ./wordindex.out /; x=$(($x-1)); done
 
 x=100; while [ $x -gt 0 ]; do scp -i aws_demo.pem ubuntu@18.118.169.200:/home/ubuntu/sample21.txt /home/ubuntu/aws-labs/; x=$(($x-1)); done
 
-=IFNA(LEFT(F5,LEN(F5)-1)*CHOOSE(MATCH(RIGHT(F5,1),{"k","B"},0),1000,1),F5)
+=IFNA(LEFT(J1093,LEN(J1093)-1)*CHOOSE(MATCH(RIGHT(J1093,1),{"k","B","M"},0),1000,1,1000000),J1093)
 
 scp -i aws_demo.pem ubuntu@3.131.119.253:/home/ubuntu/PranabNandy.xls /home/pranab/Documents/
 
