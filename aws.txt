@@ -19,6 +19,8 @@ x=100; while [ $x -gt 0 ]; do scp -i aws_demo.pem ubuntu@18.118.169.200:/home/ub
 
 =IFNA(LEFT(J1093,LEN(J1093)-1)*CHOOSE(MATCH(RIGHT(J1093,1),{"k","B","M"},0),1000,1,1000000),J1093)
 
+=ARRAYFORMULA(ROW(YY1:YY1000))
+
 scp -i aws_demo.pem ubuntu@3.131.119.253:/home/ubuntu/PranabNandy.xls /home/pranab/Documents/
 
 while true; do (echo "%CPU " && ps -e -o pcpu --sort=pcpu | cut -d" " -f1-5 | tail) >> cpu.log; sleep 5; done
