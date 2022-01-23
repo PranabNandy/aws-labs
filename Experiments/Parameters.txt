@@ -9,6 +9,8 @@ Parameters
 7) Network Send
 8) CPU usages
 
+For GCP: we need some extra flags like interruption flag,some system flags etc.
+
 
 Programs
 -------------------
@@ -19,5 +21,6 @@ Programs
 5) File + Iteration   ( Create and Delete)
 6) File + Fork
 7) File + Thread     ( Read all Dir)
-8) 1TB files send+receive ( Disk read+write)
+8) Syn Flood attrack
+8) files receive ( Disk read+write)
  
