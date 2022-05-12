@@ -1,4 +1,12 @@
-
+p1- ok
+p2- ok
+p3- ok
+p4- ok
+p5
+p6
+p7- ok
+p8
+-------------------------------------------------------
 ( Make sure you created the IAM role)
 
 wget https://s3.amazonaws.com/amazoncloudwatch-agent/ubuntu/amd64/latest/amazon-cloudwatch-agent.deb
@@ -21,7 +29,7 @@ x=100; while [ $x -gt 0 ]; do scp -i aws_demo.pem ubuntu@18.118.169.200:/home/ub
 
 =ARRAYFORMULA(ROW(YY1:YY1000))
 
-scp -i aws_demo.pem ubuntu@3.131.119.253:/home/ubuntu/PranabNandy.xls /home/pranab/Documents/
+scp -i sir.pem ubuntu@3.131.119.253:/home/ubuntu/PranabNandy.xls /home/pranab/Documents/
 
 while true; do (echo "%CPU " && ps -e -o pcpu --sort=pcpu | cut -d" " -f1-5 | tail) >> cpu.log; sleep 5; done
 
@@ -30,6 +38,9 @@ mpstat 1 >>cpu.csv
 dstat -m >>Memory.csv
 
 dstat >>AllLogs.csv
+
+sg-0e35aa50272b98e7d
+launch-wizard-1
 -------------------------------------------------------------------
 
 http://18.117.73.240:8000/
@@ -49,7 +60,9 @@ Go instance id --> security group  --> add ICMPv4 type
 nano index.html
 
 <html>
-.....
+<body>
+<h1> Hi satyam</h1>
+<body>
 </html>
 
 python3 -m http.server
@@ -67,4 +80,12 @@ sar -n DEV 1  >> network.log
 
 dstat -d >>disk.log
 --------------------------------------------------------------------
+VPC ( 11.0.0.0/16)
 
+Internet Gateway( Attach)
+
+Subnet (pu - 11.0.1.0/24     pr - 11.0.2.0/24)
+
+RT ( pu - outer world -- IG) (pr -- )
+
+SG ( change VPC --- inbound outbound )
