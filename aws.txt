@@ -29,6 +29,8 @@ x=100; while [ $x -gt 0 ]; do scp -i aws_demo.pem ubuntu@18.118.169.200:/home/ub
 
 =ARRAYFORMULA(ROW(YY1:YY1000))
 
+scp -i a.pem /home/ubuntu/b.cpp ubuntu@11.1.2.169:/home/ubuntu/B/
+
 scp -i sir.pem ubuntu@3.131.119.253:/home/ubuntu/PranabNandy.xls /home/pranab/Documents/
 
 while true; do (echo "%CPU " && ps -e -o pcpu --sort=pcpu | cut -d" " -f1-5 | tail) >> cpu.log; sleep 5; done
